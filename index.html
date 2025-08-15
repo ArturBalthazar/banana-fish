@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Dream Builder Export</title>
+  <style>
+    html, body, #renderCanvas {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #000;
+      overflow: hidden;
+    }
+    
+    /* Loading overlay styles */
+    #loadingOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    #loadingOverlay.hidden {
+      display: none;
+    }
+    
+    #loadingText {
+      color: white;
+      text-align: center;
+      font-size: 18px;
+    }
+    
+    .error {
+      color: #ff6b6b;
+      font-size: 16px;
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="renderCanvas"></canvas>
+  
+  <!-- Loading overlay -->
+  <div id="loadingOverlay">
+    <div id="loadingText">Loading scene...</div>
+  </div>
+  
+  <!-- Babylon.js CDN -->
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+  
+  <!-- Main application script -->
+  <script src="app.js"></script>
+</body>
+</html>
