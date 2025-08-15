@@ -1,0 +1,380 @@
+{
+  "version": 1,
+  "sceneVersion": 1803,
+  "sceneSettings": {
+    "environment": {
+      "clearColor": [
+        0.7058823529411765,
+        0.8823529411764706,
+        0.996078431372549,
+        0
+      ],
+      "ambientColor": [
+        0,
+        0,
+        0
+      ],
+      "useIBL": false,
+      "iblPath": null,
+      "iblIntensity": 1,
+      "useSkybox": true,
+      "skyboxType": "cube",
+      "skyboxPanoramaPath": null,
+      "skyboxMaterial": "fromIBL",
+      "skyboxTextures": {
+        "nx": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/skybox/nx.png",
+        "ny": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/skybox/ny.png",
+        "nz": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/skybox/nz.png",
+        "px": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/skybox/px.png",
+        "py": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/skybox/py.png",
+        "pz": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/skybox/pz.png"
+      },
+      "fogMode": "none"
+    },
+    "imageProcessing": {
+      "contrast": 1,
+      "exposure": 1,
+      "toneMappingEnabled": false,
+      "toneMappingType": "standard",
+      "vignetteEnabled": false,
+      "vignetteWeight": 1,
+      "vignetteStretch": 0,
+      "vignetteFov": 1.5,
+      "vignetteColor": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ditheringEnabled": false,
+      "ditheringIntensity": 0.5
+    }
+  },
+  "nodes": [
+    {
+      "id": "camera1",
+      "kind": "camera",
+      "name": "Main Camera",
+      "transform": {
+        "position": [
+          8.735312612784079e-16,
+          4.676575660705566,
+          -14.265847206115723
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "enabled": true,
+      "camera": {
+        "type": "ArcRotate",
+        "active": true,
+        "minZ": 0.1,
+        "maxZ": 10000,
+        "fov": 0.7853981633974483,
+        "alpha": -7.586592807851319,
+        "beta": 1.3535031701157871,
+        "radius": 22.4244948955931,
+        "target": [
+          0.8734790522704479,
+          5.3746250669014595,
+          -1.2294949490155904
+        ],
+        "targetMode": "object",
+        "targetObject": "root::banana"
+      }
+    },
+    {
+      "id": "light1",
+      "kind": "light",
+      "name": "Main Light",
+      "transform": {
+        "position": [
+          0,
+          10,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "enabled": true,
+      "light": {
+        "type": "Hemispheric",
+        "intensity": 0.7,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "enabled": true,
+        "groundColor": [
+          0.3,
+          0.3,
+          0.3
+        ]
+      }
+    },
+    {
+      "id": "defaultCube",
+      "kind": "mesh",
+      "name": "Default Cube",
+      "transform": {
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "scaling": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "enabled": true
+    },
+    {
+      "id": "ground",
+      "kind": "mesh",
+      "name": "Ground",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "scaling": [
+          3,
+          1,
+          3
+        ]
+      },
+      "visible": true,
+      "enabled": true
+    },
+    {
+      "id": "root::fish",
+      "kind": "model",
+      "name": "fish",
+      "src": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/fish.gltf",
+      "transform": {
+        "position": [
+          -5.767114162445068,
+          5.866319179534912,
+          -0.3842480480670929
+        ],
+        "rotation": [
+          -1.3499443784041611,
+          3.9796385576565924e-7,
+          -0.8099884686497864
+        ],
+        "scaling": [
+          40,
+          40,
+          40
+        ]
+      },
+      "visible": true,
+      "enabled": true,
+      "meta": {
+        "assetId": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/fish.gltf",
+        "file": "fish.gltf"
+      }
+    },
+    {
+      "id": "root::banana",
+      "kind": "model",
+      "name": "banana",
+      "src": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/banana.gltf",
+      "transform": {
+        "position": [
+          3.381946563720703,
+          6.865024566650391,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scaling": [
+          40,
+          40,
+          40
+        ]
+      },
+      "visible": true,
+      "enabled": true,
+      "meta": {
+        "assetId": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/banana.gltf",
+        "file": "banana.gltf"
+      }
+    },
+    {
+      "id": "root::fish::mesh::mk-fish-3r0mtl",
+      "kind": "mesh",
+      "name": "mk_fish",
+      "parentId": "root::fish",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scaling": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "enabled": true,
+      "metadata": {
+        "importedAsset": true,
+        "sourceModelId": "root::fish",
+        "sourceMeshName": "mk_fish"
+      }
+    },
+    {
+      "id": "root::banana::mesh::mk-banana-9frex8",
+      "kind": "mesh",
+      "name": "mk_banana",
+      "parentId": "root::banana",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scaling": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "enabled": true,
+      "metadata": {
+        "importedAsset": true,
+        "sourceModelId": "root::banana",
+        "sourceMeshName": "mk_banana"
+      }
+    },
+    {
+      "id": "root::samsungbeach-zflip-v7",
+      "kind": "model",
+      "name": "SamsungBeach_ZFlip_v7",
+      "src": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/SamsungBeach_ZFlip_v7.glb",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scaling": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "enabled": true,
+      "meta": {
+        "assetId": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/SamsungBeach_ZFlip_v7.glb",
+        "file": "SamsungBeach_ZFlip_v7.glb"
+      }
+    },
+    {
+      "id": "root::samsungbeach-zflip-v7::mesh::mk-coloratlas-pft8vz",
+      "kind": "mesh",
+      "name": "mk_ColorAtlas",
+      "parentId": "root::samsungbeach-zflip-v7",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scaling": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "enabled": true,
+      "metadata": {
+        "importedAsset": true,
+        "sourceModelId": "root::samsungbeach-zflip-v7",
+        "sourceMeshName": "mk_ColorAtlas"
+      }
+    },
+    {
+      "id": "root::samsungbeach-zflip-v7::mesh::mk-textured-aggregated-la8adp",
+      "kind": "mesh",
+      "name": "mk_Textured_Aggregated",
+      "parentId": "root::samsungbeach-zflip-v7",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scaling": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "enabled": true,
+      "metadata": {
+        "importedAsset": true,
+        "sourceModelId": "root::samsungbeach-zflip-v7",
+        "sourceMeshName": "mk_Textured_Aggregated"
+      }
+    }
+  ],
+  "materialOverrides": {
+    "mk_Fish": {
+      "albedoTexture": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/fish/Image_0.jpg",
+      "ambientTexture": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/fish/mk_Fishes_lightmap.png"
+    },
+    "mk_banana": {
+      "albedoTexture": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/banana/Banana_tklkaixiw_Mid_2K_BaseColor.jpg",
+      "metallicTexture": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/banana/Banana_tklkaixiw_Mid_2K_Roughness.png",
+      "bumpTexture": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/banana/Banana_tklkaixiw_Mid_2K_Normal.jpg",
+      "ambientTexture": "867a8a57-eee4-40db-a3b8-7d15faa374e3/projects/a6272715-5ceb-42fc-83c4-4141fccac84b/assets/banana/mk_banana_lightmap.png"
+    }
+  }
+}
